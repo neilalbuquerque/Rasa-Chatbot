@@ -1,0 +1,85 @@
+session_config:
+  session_expiration_time: 0.0
+  carry_over_slots_to_new_session: true
+intents:
+- hello
+- mood_unhappy
+- affirm
+- laugh_at_joke
+- search_provider
+- thanks
+- goodbye
+- greet_wish
+- bot_challenge
+- greet
+- inform
+- deny
+- mood_great
+- ask_joke
+- festive
+entities:
+- location
+- facility_type
+slots:
+  address:
+    type: unfeaturized
+  facility_type:
+    type: text
+  link:
+    type: text
+  location:
+    type: text
+responses:
+  utter_hi:
+  - text: Hey this a Rasa Chatbot
+  utter_greet:
+  - text: Hey! How are you?
+  utter_cheer_up:
+  - text: 'Here is something to cheer you up:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_how_can_i_help:
+  - text: Hello. I am a medicare locator. I can help you find nearest hospital. How
+      can I help?
+  - text: Hi. My name is medicare locator. How can I help you today?
+  utter_ask_location:
+  - text: Hey can I get your location?
+  - text: To find the nearest {facility_type} I need your address.
+  utter_greet_wish:
+  - text: I am good,Thankyou. How are you?
+    image: https://lh3.googleusercontent.com/proxy/hIWNzEbfXomgQGlmJ2w5IBzP2g0fbf7pirC-NPmMcvC-I5b8iuvC0Fk3yfwbd5I8ALVPUFMt1jFiFa5LuOxKn9-2JbMXvF8
+  utter_joke:
+  - text: Why was six scared of seven? Because seven "ate" nine.
+  - text: Have you ever eaten a watch? It’s time-consuming.
+  - text: Why should you never date tennis players? Love means nothing to them.
+  - text: One joke, coming up! What is a sea monster’s favorite snack? Ships and dip.
+  - text: This might make you laugh. How do robots eat guacamole? With computer chips.
+  utter_laugh_response:
+  - text: Thanks
+  - text: Glad you liked it.
+  - text: Glad to give you a laugh.
+  utter_festival:
+  - text: Hope you have a wonderful day.
+actions:
+- utter_greet
+- utter_cheer_up
+- utter_did_that_help
+- utter_happy
+- utter_goodbye
+- utter_iamabot
+- utter_how_can_i_help
+- utter_ask_location
+- action_facility_search
+- utter_greet_wish
+- utter_joke
+- utter_laugh_response
+- action_festival_wish
+- utter_hi
+- utter_festival

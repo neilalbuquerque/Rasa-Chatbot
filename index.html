@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rasa Chatbot</title>
+</head>
+<!--<style>-->
+<!--body {-->
+<!--  background-image: url('https://blog.rasa.com/content/images/2018/04/rasa_logo_horizontal_purple-3.png);-->
+<!--}-->
+<!--</style>-->
+<body background="./rasa_logo_horizontal_purple-3.png" >
+
+<div id="webchat"/>
+<script src="https://storage.googleapis.com/mrbot-cdn/webchat-latest.js"></script>
+
+<script>
+  WebChat.default.init({
+    selector: "#webchat",
+    initPayload: "/hello",
+    showTimestamp=true,
+    customData: {"language": "en"}, // arbitrary custom data. Stay minimal as this will be added to the socket
+    socketUrl: "http://localhost:5005",
+    socketPath: "/socket.io/",
+    title: "Chatbot",
+    fullScreenMode: true,
+    profileAvatar: "https://s.gravatar.com/avatar/4a54a82f55e4c2092a37db7ba5d0f0ea?size=496&default=retro",
+    params: {
+    images: {
+     dims: {
+        width: 300,
+<!--        height: 200,-->
+        }
+      },
+      storage: "session"
+    }
+  });
+</script>
+
+</body>
+</html>
